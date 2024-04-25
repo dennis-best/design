@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 .work-sans-400 {
   font-family: "Work Sans", sans-serif;
@@ -7,3 +7,43 @@
   font-style: normal;
 }
 
+button {
+  /* Base styles */
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  border: none;
+  cursor: pointer;
+
+  /* Hide button caption text */
+  overflow: hidden;
+  color: transparent;
+
+  /* The fill animation */
+  background-color: Crimson;
+  transition: background-color 0.2s;
+
+  /* Store the SVG in a variable so it's easy to use */
+  --svg: url('data:image/svg+xml,\
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">\
+            <g stroke-linecap="round" stroke-width="4" stroke="rgb(0, 0, 0)" fill="none">\
+                <circle cx="12" cy="12" r="10"/>\
+                <path d="M7 11 H17"/>\
+            </g>\
+        </svg>');
+
+  /* Chrome, still requires prefix in 2022 */
+  -webkit-mask: var(--svg);
+
+  /* Firefox and Safari */
+  mask: var(--svg);
+}
+
+button:hover,
+button:focus {
+  background-color: Turquoise;
+}
+
+button:active {
+  background-color: Gold;
+}
