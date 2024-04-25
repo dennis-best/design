@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
+  --default-color: #0d0e10;
+  --default-padding: 1.5rem;
+  --container-large: 71.25rem;
+  --logo: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="71" height="38" fill="none"><path fill="%230d0e10" fill-rule="evenodd" d="M68.997 31.408a10.707 10.707 0 0 1-2.913 3.285c-1.206.902-2.576 1.598-4.11 2.093a15.352 15.352 0 0 1-4.75.741H.573v-7.524h14.046V7.643H.572V.12h55.72c1.592 0 3.156.248 4.69.743 1.536.495 2.906 1.193 4.11 2.093 1.205.9 2.176 1.987 2.915 3.258.737 1.272 1.107 2.683 1.107 4.24 0 1.907-.546 3.494-1.633 4.767-1.088 1.272-2.584 2.242-4.487 2.914 2.099.813 3.808 1.988 5.13 3.524 1.319 1.538 1.98 3.366 1.98 5.486 0 1.553-.37 2.975-1.107 4.264ZM58.36 22.932a5.108 5.108 0 0 0-1.545-.875 5.269 5.269 0 0 0-1.806-.318H23.536v8.264h31.473c.62 0 1.223-.106 1.806-.317a5.19 5.19 0 0 0 1.545-.873 4.346 4.346 0 0 0 1.077-1.325c.275-.512.41-1.05.41-1.618 0-.563-.135-1.102-.41-1.614a4.307 4.307 0 0 0-1.077-1.324Zm-1.048-9.249c.874-.67 1.31-1.518 1.31-2.542 0-1.024-.436-1.864-1.31-2.516a4.798 4.798 0 0 0-2.944-.983H23.536v7.05h30.832a4.712 4.712 0 0 0 2.944-1.009Z" clip-rule="evenodd"/></svg>');
   --line-torq: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="209" height="14" fill="none"><path stroke="%23D0EAEC" stroke-width="4" d="M1 7.543C44.254 3.038 122.728-4.132 208 12"/></svg>');
   --line-pink: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="209" height="14" fill="none"><path stroke="%23E992B1" stroke-width="4" d="M1 7.543C44.254 3.038 122.728-4.132 208 12"/></svg>');
 }
@@ -17,12 +21,19 @@ body {
   font-size: 16px;
   min-height: 100%;
   padding: 0;
+  color: var(--default-color);
 }
 
 main,
 footer,
 header {
-  padding: 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.container-large {
+  max-width: var(--container-large);
 }
 
 .work-sans-400 {
@@ -31,9 +42,108 @@ header {
   font-weight: 400;
   font-style: normal;
 }
+h1 {
+  letter-spacing: -0.03em;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.14583333;
+}
+
+h3 {
+  letter-spacing: -0.03em;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1;
+  position: relative;
+}
 
 p {
   line-height: 1.4;
+}
+
+.hero-salutation {
+  max-width: 33.75rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.hero-display {
+  max-width: 52.5rem;
+  margin-bottom: 3rem;
+  font-size: 5rem;
+  line-height: 1.05;
+  text-align: center;
+}
+
+.hero-paragraph {
+  text-align: center;
+  max-width: 33.75rem;
+  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+.button-submit {
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #0d0e10;
+  border-radius: 3.125rem;
+  justify-content: center;
+  align-items: center;
+  min-width: 16.25rem;
+  padding: 1.5rem 3.4375rem;
+  line-height: 1.5rem;
+  display: flex;
+}
+
+/* ---------------- HEADER ---------------- */
+header {
+  width: 100%;
+  justify-content: center;
+}
+
+header section {
+  padding: var(--default-padding) 5%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 2rem;
+  height: 1.25rem;
+  display: block;
+  background-image: var(--logo);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.logo:hover {
+  filter: brightness(0) saturate(100%) invert(22%) sepia(70%) saturate(2147%)
+    hue-rotate(344deg) brightness(96%) contrast(81%);
+}
+
+nav a {
+  color: var(--default-color);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--default-color);
+  text-decoration: underline;
+}
+
+/* MAIN */
+section.hero {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
 }
 
 .accent-line {
