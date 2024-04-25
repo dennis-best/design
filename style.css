@@ -4,6 +4,10 @@
   --line-pink: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="209" height="14" fill="none"><path stroke="%23E992B1" stroke-width="4" d="M1 7.543C44.254 3.038 122.728-4.132 208 12"/></svg>');
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   line-height: 1.4;
 }
