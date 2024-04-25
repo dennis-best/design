@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --line-torq: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="209" height="14" fill="none"><path stroke="%23D0EAEC" stroke-width="4" d="M1 7.543C44.254 3.038 122.728-4.132 208 12"/></svg>');
+  --line-pink: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="209" height="14" fill="none"><path stroke="%23E992B1" stroke-width="4" d="M1 7.543C44.254 3.038 122.728-4.132 208 12"/></svg>');
+}
 
+body {
+  line-height: 1.4;
+}
 .work-sans-400 {
   font-family: "Work Sans", sans-serif;
   font-optical-sizing: auto;
@@ -7,63 +14,43 @@
   font-style: normal;
 }
 
-button {
-  /* Base styles */
-  display: block;
-  width: 4rem;
-  height: 4rem;
-  border: none;
-  cursor: pointer;
-
-  /* Hide button caption text */
-  overflow: hidden;
-  color: transparent;
-
-  /* The fill animation */
-  background-color: Crimson;
-  transition: background-color 0.2s;
-
-  /* Store the SVG in a variable so it's easy to use */
-  --svg: url('data:image/svg+xml,\
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">\
-            <g stroke-linecap="round" stroke-width="4" stroke="rgb(0, 0, 0)" fill="none">\
-                <circle cx="12" cy="12" r="10"/>\
-                <path d="M7 11 H17"/>\
-            </g>\
-        </svg>');
-
-  /* Chrome, still requires prefix in 2022 */
-  -webkit-mask: var(--svg);
-
-  /* Firefox and Safari */
-  mask: var(--svg);
+p {
+  line-height: 1.4;
 }
 
-button:hover,
-button:focus {
-  background-color: Turquoise;
+.accent-line {
+  display: inline-block;
+  background-image: var(--line-pink);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: 50%;
+  background-position-y: 100%;
 }
 
-button:active {
-  background-color: Gold;
+.accent-line:hover {
+  background-image: var(--line-torq);
 }
 
-.square {
-  width: 200px;
-  height: 200px;
-  background: teal;
-  border-radius: 8px;
-  opacity: 0;
-  transform: scale(1.2);
+.animated-section-wrapper {
+  margin-top: 20rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .square {
-    transition: opacity 1.5s ease, transform 1.5s ease;
+.animated-section {
+  width: 100%;
+  height: auto;
+}
+
+@keyframes wipe-enter {
+  0% {
+    transform: scale(0, 0.025);
+  }
+  50% {
+    transform: scale(1, 0.025);
   }
 }
 
-.square-transition {
-  opacity: 1;
-  transform: none;
+@media (prefers-reduced-motion: no-preference) {
+  .section-animation {
+    animation: wipe-enter 0.5s 1;
+  }
 }

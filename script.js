@@ -1,16 +1,17 @@
-const square = document.querySelector('.square');
-square.classList.remove('square-transition');
-
-// Create the observer, same as before:
+// Create the observer like the examples above
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      square.classList.add('square-transition');
+      entry.target.classList.add('section-animation');
       return;
     }
 
-    square.classList.remove('square-transition');
+    entry.target.classList.remove('section-animation');
   });
 });
 
-observer.observe(document.querySelector('.square-wrapper'));
+// Get multiple elements instead of a single one using "querySelectorAll"
+const squares = document.querySelectorAll('.animated-section');
+
+// Loop over the elements and add each one to the observer
+squares.forEach((element) => observer.observe(element));
