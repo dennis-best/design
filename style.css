@@ -8,9 +8,23 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   line-height: 1.4;
+  font-size: 16px;
+  min-height: 100%;
+  padding: 0;
 }
+
+main,
+footer,
+header {
+  padding: 1.5rem;
+}
+
 .work-sans-400 {
   font-family: "Work Sans", sans-serif;
   font-optical-sizing: auto;
@@ -23,6 +37,10 @@ p {
 }
 
 .accent-line {
+  margin-left: -7px;
+  margin-right: -7px;
+  padding-right: 7px;
+  padding-left: 7px;
   display: inline-block;
   background-image: var(--line-pink);
   background-repeat: no-repeat;
