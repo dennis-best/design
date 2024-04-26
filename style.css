@@ -1,9 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
   --default-color: #0d0e10;
+  --blue: #98bfd3;
   --default-padding: 1.5rem;
   --container-large: 71.25rem;
-  --logo: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="71" height="38" fill="none"><path fill="%230d0e10" fill-rule="evenodd" d="M68.997 31.408a10.707 10.707 0 0 1-2.913 3.285c-1.206.902-2.576 1.598-4.11 2.093a15.352 15.352 0 0 1-4.75.741H.573v-7.524h14.046V7.643H.572V.12h55.72c1.592 0 3.156.248 4.69.743 1.536.495 2.906 1.193 4.11 2.093 1.205.9 2.176 1.987 2.915 3.258.737 1.272 1.107 2.683 1.107 4.24 0 1.907-.546 3.494-1.633 4.767-1.088 1.272-2.584 2.242-4.487 2.914 2.099.813 3.808 1.988 5.13 3.524 1.319 1.538 1.98 3.366 1.98 5.486 0 1.553-.37 2.975-1.107 4.264ZM58.36 22.932a5.108 5.108 0 0 0-1.545-.875 5.269 5.269 0 0 0-1.806-.318H23.536v8.264h31.473c.62 0 1.223-.106 1.806-.317a5.19 5.19 0 0 0 1.545-.873 4.346 4.346 0 0 0 1.077-1.325c.275-.512.41-1.05.41-1.618 0-.563-.135-1.102-.41-1.614a4.307 4.307 0 0 0-1.077-1.324Zm-1.048-9.249c.874-.67 1.31-1.518 1.31-2.542 0-1.024-.436-1.864-1.31-2.516a4.798 4.798 0 0 0-2.944-.983H23.536v7.05h30.832a4.712 4.712 0 0 0 2.944-1.009Z" clip-rule="evenodd"/></svg>');
+  --peace-hand: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" fill="none"><path fill="%23FFCC41" d="M6.5 0c.553 0 1 .447 1 1v6.5h-2V1c0-.553.447-1 1-1Zm3 5c.553 0 1 .447 1 1v2a.999.999 0 1 1-2 0V6c0-.553.447-1 1-1Zm2 2a.999.999 0 1 1 2 0v2a.999.999 0 1 1-2 0V7ZM2.416 1.6l2.58 5.9h-2.18L.584 2.4A.998.998 0 0 1 1.1 1.084a.997.997 0 0 1 1.316.516Zm.843 6.916L3.253 8.5H6.25a1.25 1.25 0 1 1 0 2.5H4.5c-.275 0-.5.225-.5.5s.225.5.5.5h1.75A2.249 2.249 0 0 0 8.5 9.75v-.019a2.001 2.001 0 0 0 2.112-.069 2 2 0 0 0 2.888 1.07V11c0 2.762-2.238 5-5 5H6.572a5 5 0 0 1-3.535-1.466l-.365-.362A4.003 4.003 0 0 1 1.5 11.344V10.5a2 2 0 0 1 1.76-1.984Z"/></svg>');
+  --waving-hand: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"><path fill="%23FFCC41" fill-opacity=".941" d="m11.004 2.657-.038-.266A1.498 1.498 0 0 0 9.694 1.12l-.265-.037a.503.503 0 0 1-.23-.896.499.499 0 0 1 .37-.095l.266.038a2.499 2.499 0 0 1 2.122 2.121l.037.266a.5.5 0 0 1-.99.14ZM5.792 2.29A1.001 1.001 0 0 1 7.207.876l6 5.999c.103.103.293.034.293-.116V4.332a1.25 1.25 0 0 1 2.5 0v5.511a6.069 6.069 0 0 1-7.784 5.824 5.207 5.207 0 0 1-2.424-1.377l-.153-.153-3.347-3.347-1-1a1.001 1.001 0 0 1 1.416-1.415l.996.997.004.003 1.456 1.459a.414.414 0 0 0 .584-.584L1.792 6.29a1.001 1.001 0 0 1 1.416-1.415l3.955 3.96a.414.414 0 0 0 .584-.584L3.293 3.79a1.001 1.001 0 0 1 1.415-1.416l4.456 4.46a.414.414 0 0 0 .584-.584L5.793 2.29h-.001Zm-5.365 8.8a.5.5 0 0 1 .565.424l.038.266c.093.66.612 1.178 1.271 1.271l.266.038c.272.04.462.294.425.566a.503.503 0 0 1-.566.425l-.265-.038A2.498 2.498 0 0 1 .039 11.92l-.034-.265a.5.5 0 0 1 .425-.566H.427v.001Z"/></svg>');
+  --exit: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" fill="none"><path fill="%230d0e10" d="M7.79.265a1.017 1.017 0 0 1 1.37 0l4.013 3.669a4.476 4.476 0 0 0-1.392 1.802l-.337.807-.338.168a1.992 1.992 0 0 0-.902 2.684 2.027 2.027 0 0 0 2.637.928l-.214.235a2.468 2.468 0 0 0-.587 1.084l-.347 1.356H4.437a1.508 1.508 0 0 1-1.515-1.5v-3.5h-1.01a1.01 1.01 0 0 1-.94-.634.995.995 0 0 1 .256-1.1L7.79.265ZM4.942 6.5v2c0 .274.227.5.504.5h2.02a.504.504 0 0 0 .504-.5v-2c0-.275-.227-.5-.505-.5H5.446a.504.504 0 0 0-.504.5Zm9.59-6.5c.402 0 .787.159 1.071.44a1.493 1.493 0 0 1 0 2.121 1.522 1.522 0 0 1-2.142 0 1.492 1.492 0 0 1 0-2.121c.284-.281.67-.44 1.071-.44Zm2.66 6.265-.092-.037.534 1.984c.176.66.003 1.362-.464 1.865l-2.23 2.41-.695 2.752a1.012 1.012 0 0 1-1.224.728 1.001 1.001 0 0 1-.735-1.212l.726-2.878c.06-.244.183-.465.353-.65l1.562-1.687-.61-2.047-.302.72a1.511 1.511 0 0 1-.72.765l-.842.415a1.013 1.013 0 0 1-1.353-.447.994.994 0 0 1 .451-1.34l.678-.334.483-1.15a3.482 3.482 0 0 1 3.215-2.122c.72 0 1.429.15 2.085.438l.253.109a4.003 4.003 0 0 1 2.189 2.39l.082.244a.999.999 0 0 1-.637 1.265 1.014 1.014 0 0 1-1.278-.63l-.082-.244a2.004 2.004 0 0 0-1.095-1.194l-.252-.11v-.003Zm.946 4.222.79 1.95L20.8 14.29a.995.995 0 0 1 0 1.416c-.394.39-1.035.39-1.43 0l-1.946-1.928a1.498 1.498 0 0 1-.334-.503l-.457-1.131 1.284-1.387c.078-.085.151-.175.22-.27v-.002Z"/></svg>');
+  --logo: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="19" height="16" fill="none"><path fill="%230d0e10" fill-rule="evenodd" d="M18.378 13.383a4.58 4.58 0 0 1-1.246 1.405 5.968 5.968 0 0 1-1.758.895 6.564 6.564 0 0 1-2.03.317H1.515a.855.855 0 0 1-.856-.856v-1.507c0-.472.383-.855.856-.855h1.302V3.218H1.516a.855.855 0 0 1-.856-.856V.855C.66.383 1.043 0 1.516 0h11.428a6.5 6.5 0 0 1 2.007.318c.656.211 1.242.51 1.758.895.515.385.93.85 1.246 1.393a3.55 3.55 0 0 1 .473 1.813c0 .816-.233 1.495-.698 2.04-.465.544-1.105.959-1.92 1.246.899.348 1.63.85 2.195 1.507.564.658.847 1.44.847 2.347 0 .664-.158 1.272-.474 1.824Zm-4.55-3.626a2.186 2.186 0 0 0-.66-.374 2.254 2.254 0 0 0-.773-.136H6.633v3.535h5.762c.266 0 .524-.046.773-.136.25-.091.47-.216.66-.373.192-.16.346-.348.461-.567a1.44 1.44 0 0 0 0-1.383 1.842 1.842 0 0 0-.46-.566Zm-.448-3.956c.374-.286.56-.649.56-1.087 0-.438-.186-.797-.56-1.076a2.052 2.052 0 0 0-1.259-.42H6.633v3.014h5.488c.466 0 .885-.143 1.26-.43Z" clip-rule="evenodd"/></svg>');
   --line-torq: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="209" height="14" fill="none"><path stroke="%23D0EAEC" stroke-width="4" d="M1 7.543C44.254 3.038 122.728-4.132 208 12"/></svg>');
   --line-pink: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="209" height="14" fill="none"><path stroke="%23E992B1" stroke-width="4" d="M1 7.543C44.254 3.038 122.728-4.132 208 12"/></svg>');
 }
@@ -22,6 +26,10 @@ body {
   min-height: 100%;
   padding: 0;
   color: var(--default-color);
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 main,
@@ -36,12 +44,6 @@ header {
   max-width: var(--container-large);
 }
 
-.work-sans-400 {
-  font-family: "Work Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
 h1 {
   letter-spacing: -0.03em;
   margin-top: 0;
@@ -70,6 +72,24 @@ p {
   margin-top: 0;
   margin-bottom: 2rem;
   text-align: center;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.hero-salutation__icon {
+  width: 2rem;
+  height: 2rem;
+  background-image: var(--waving-hand), var(--peace-hand);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center, 1.5rem -3rem;
+  transition: all 0.33s ease-in-out;
+}
+
+.hero-salutation:hover .hero-salutation__icon {
+  background-position: 1.5rem -3rem, center center;
+  transition: all 0.33s ease-in-out;
+  transform: rotate(1turn);
 }
 
 .hero-display {
@@ -108,7 +128,7 @@ header {
 }
 
 header section {
-  padding: var(--default-padding) 5%;
+  padding: 2rem 4%;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -117,33 +137,72 @@ header section {
 
 .logo {
   width: 2rem;
-  height: 1.25rem;
+  height: 1.5rem;
   display: block;
-  background-image: var(--logo);
+  background-image: var(--logo), var(--exit);
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center center, 1.5rem -3rem;
+  transition: all 0.33s ease-in-out;
 }
 
 .logo:hover {
-  filter: brightness(0) saturate(100%) invert(22%) sepia(70%) saturate(2147%)
-    hue-rotate(344deg) brightness(96%) contrast(81%);
+  background-position: 1.5rem -3rem, center center;
+  transition: all 0.33s ease-in-out;
+  transform: rotate(1turn);
 }
 
-nav a {
+nav {
+  display: flex;
+  gap: 3rem;
+}
+
+a.nav-link {
+  display: block;
   color: var(--default-color);
   text-decoration: none;
+  padding: 1rem 0;
 }
 
-nav a:hover {
+a.nav-link:hover {
   color: var(--default-color);
   text-decoration: underline;
 }
 
-/* MAIN */
+/* ---------------- HERO ---------------- */
+
 section.hero {
+  padding: 3rem 3%;
+
   flex-direction: column;
   display: flex;
   align-items: center;
+}
+
+.avatar-circle {
+  background-color: var(--blue);
+  border-radius: 100px;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 160px;
+  margin-bottom: 34px;
+  display: flex;
+  overflow: hidden;
+  background-image: url(assets/me.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.avatar-circle:hover {
+  cursor: pointer;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
 }
 
 .accent-line {
@@ -163,26 +222,37 @@ section.hero {
   background-image: var(--line-torq);
 }
 
-.animated-section-wrapper {
-  margin-top: 20rem;
-}
+/* ---------------- Sections ---------------- */
 
-.animated-section {
+section.major {
+  padding: 4rem 4%;
+  max-width: var(--container-large);
   width: 100%;
-  height: auto;
+  scroll-behavior: smooth;
 }
 
-@keyframes wipe-enter {
-  0% {
-    transform: scale(0, 0.025);
+/* ---------------- ANIMATIONS ---------------- */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
   }
-  50% {
-    transform: scale(1, 0.025);
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .section-animation {
-    animation: wipe-enter 0.5s 1;
+  .animmate.slow {
+    animation-duration: 0.4s;
+  }
+  .animmate.fast {
+    animation-duration: 0.2s;
+  }
+  .fadeInUp.animate {
+    animation: fadeInUp 0.4s 1;
   }
 }
